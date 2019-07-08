@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/adminc.css">
+
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="hint" id="hint">
+        <div class="ss">
+            <div class="container">
+    
+                <div class="page-header">
+                    <h1>
+                        博客后台
+                        <small>孙东</small>
+                    </h1>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li role="presentation" class="list-item active" data-wrap="home">
+                                <a href="#">Home</a>
+                            </li>
+                            <li role="presentation" class="list-item " data-wrap="fabiao">
+                                <a href="#">发布文章</a>
+                            </li>
+                            <li role="presentation" class="list-item" id="shenhe-btn" data-wrap="shenhe">
+                                <a href="#">审核评论</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-9 wrap-wrap">
+                        <!-- 主页 -->
+                        <div class="right-wrap active" id="home">主页</div>
+                        <!-- 发送文章部分 -->
+                        <div class="right-wrap" id="fabiao">
+                            <form method="POST" action="/admin/uploadPage">
+                                <div class="form-group">
+                                    <label for="title">大标题</label>
+                                    <input type="text" class="form-control" id="title" name="title" placeholder="大标题">
+                                </div>
+                                <div class="form-group">
+                                    <label for="author">作者</label>
+                                    <input type="text" class="form-control" id="author" name="author" placeholder="作者">
+                                </div>
+                                <div class="form-group">
+                                    <label for="sort">分类</label>
+                                    <input type="text" class="form-control" id="sort" name="sort" placeholder="分类">
+                                </div>
+                                <div class="form-group">
+                                    <label for="intro">简介</label>
+                                    <input type="text" class="form-control" id="intro" name="intro" placeholder="简介">
+                                </div>
+                                内容
+                                <textarea class="form-control" rows="3" name="content"></textarea>
+                                <br>
+                                <button type="submit" class="btn btn-default">提交</button>
+                            </form>
+                        </div>
+                        <!-- 审核 -->
+                        <div class="right-wrap" id="shenhe">
+                            <div class="well">没有人想评论你写的东西</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+
+   
+    <script src="./js/canvas.js"></script>
+    <script src="./js/admin.js"></script>
+
+</body>
+
+</html>
